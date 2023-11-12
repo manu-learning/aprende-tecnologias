@@ -1,0 +1,11 @@
+* Gestores de Paquetes para JavaScript
+:PROPERTIES:
+:DATE-CREATED: <2023-11-12 Sun>
+:DATE-UPDATED: <2023-11-12 Sun>
+:BOOK: nil
+:BOOK-CHAPTERS: nil
+:COURSE: nil
+:COURSE-LESSONS: nil
+:END:
+** Yarn
+** Npm
