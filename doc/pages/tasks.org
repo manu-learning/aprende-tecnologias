@@ -1,0 +1,101 @@
+* Tasks
+** IN PROGRESS Shadow Cljs                                       :clojure:build_tool:
+   :PROPERTIES:
+   :DATE-CREATED: <2023-11-14 Tue>
+   :DATE-UPDATED: <2023-11-14 Tue>
+   :END:
+** TODO Helix                                               :clojure:library:reactjs:
+   :PROPERTIES:
+   :DATE-CREATED: <2023-11-14 Tue>
+   :DATE-UPDATED: <2023-11-14 Tue>
+   :END:
+** TODO Re-Frame                           :clojurescript:framework:reactjs:
+   :PROPERTIES:
+   :DATE-CREATED: <2023-11-14 Tue>
+   :DATE-UPDATED: <2023-11-14 Tue>
+   :END:
+*** Referencias
+1. https://github.com/day8/re-frame
+2. https://ericnormand.me/guide/re-frame-building-blocks
+** TODO Babashka                                                :clojure:shellscript:
+   :PROPERTIES:
+   :DATE-CREATED: <2023-11-14 Tue>
+   :DATE-UPDATED: <2023-11-14 Tue>
+   :END:
+*** Referencias
+1. https://www.braveclojure.com/quests/babooka/
+2. https://github.com/babashka/babashka
+3. https://book.babashka.org/
+** TODO nnb                                                 :clojure:nodejs:
+   :PROPERTIES:
+   :DATE-CREATED: <2023-11-14 Tue>
+   :DATE-UPDATED: <2023-11-14 Tue>
+   :END:
+*** Referencias
+1. https://github.com/babashka/nbb
+** TODO Clj Kondo                                                   :clojure:linter:
+   :PROPERTIES:
+   :DATE-CREATED: <2023-11-14 Tue>
+   :DATE-UPDATED: <2023-11-14 Tue>
+   :END:
+*** Referencias
+1. https://github.com/clj-kondo/clj-kondo
+2. https://develop.spacemacs.org/layers/+lang/clojure/README.html#enable-clj-kondo-linter
+** TODO Matcher Combinators                                :clojure:testing:
+   :PROPERTIES:
+   :DATE-CREATED: <2023-11-14 Tue>
+   :DATE-UPDATED: <2023-11-14 Tue>
+   :END:
+*** Referencias
+1. https://github.com/nubank/matcher-combinators
+** TODO Ionic                              :clojurescript:framework:reactjs:
+   :PROPERTIES:
+   :DATE-CREATED: <2023-11-14 Tue>
+   :DATE-UPDATED: <2023-11-14 Tue>
+   :END:
+*** Referencias
+1. https://ionicframework.com/
+2. https://marko.euptera.com/posts/ionic-clojure.html
+3. https://github.com/ionic-team/ionic-framework
+** TODO uix                                          :clojurescript:reactjs:
+   :PROPERTIES:
+   :DATE-CREATED: <2023-11-14 Tue>
+   :DATE-UPDATED: <2023-11-14 Tue>
+   :END:
+*** Referencias
+1. https://github.com/pitch-io/uix/
+** TODO Tools Build                                    :clojure:jar:uberjar:
+   :PROPERTIES:
+   :DATE-CREATED: <2023-11-14 Tue>
+   :DATE-UPDATED: <2023-11-14 Tue>
+   :END:
+*** Referencias
+1. https://www.karimarttila.fi/clojure/2023/03/14/creating-uberjar-for-clojure-fullstack-app.html
+2. https://clojure.org/guides/tools_build
+3. https://github.com/clojure/tools.build
+4. https://www.youtube.com/watch?v=OgV-ALpmXUI
+** TODO Uberjar                                        :clojure:jar:uberjar:
+   :PROPERTIES:
+   :DATE-CREATED: <2023-11-14 Tue>
+   :DATE-UPDATED: <2023-11-14 Tue>
+   :END:
+*** Referencias
+1. https://www.baeldung.com/leiningen-clojure
+2. https://circleci.com/blog/clojure-microservices-for-js-devs-pt-2/
+3. https://itecnote.com/tecnote/best-practices-in-building-and-deploying-clojure-applications-good-tutorials/
+** TODO Kaocha Cljs                       :clojurescript:testing:testrunner:
+   :PROPERTIES:
+   :DATE-CREATED: <2023-11-14 Tue>
+   :DATE-UPDATED: <2023-11-14 Tue>
+   :END:
+*** Referencias
+1. https://cljdoc.org/d/com.lambdaisland/kaocha-cljs/1.5.154/doc/readme
+2. https://github.com/lambdaisland/kaocha-cljs
+3. https://clojureverse.org/t/the-best-test-runner-kaocha-or-something-else/9746/5
+** Neil                                          :clojure:cli:dependencies:
+   :PROPERTIES:
+   :DATE-CREATED: <2023-11-14 Tue>
+   :DATE-UPDATED: <2023-11-14 Tue>
+   :END:
+*** Referencias
+1. https://github.com/babashka/neil
