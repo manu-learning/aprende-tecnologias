@@ -9,16 +9,92 @@
    :END:
 ** Shadow Cljs Vs Figwheel Main
 *** Shadow Cljs
+- se divide en
+  - una *biblioteca* de Clojure
+  - un *paquete* de NPM (Node Package Manager), provee una interfáz para interactuar vía *linea de comandos* para ejecutar sus funcionalidades
+- una *ClojureScript Build Tool* (herramienta de construcción de proyectos de ClojureScript)
 - más reciente que *Figwheel Main*
 - soportado por *Leiningen* (lein)
-- incluye la característica de *clojurescript build tool* (compila ClojureScript a JavaScript, para que lo entienda el motor del Web Browser)
-- incluye la característica de *browser reloadable* (recarga la página de los clientes conectados)
+- incluye la característica de *ClojureScript Build Tool* (compila ClojureScript a JavaScript, para que lo entienda el motor del Web Browser)
+- incluye la característica de *Browser Reloadable* (recarga la página de los clientes conectados)
 *** Figwheel Main
-- biblioteca de ClojureScript
-- soportado por *Leiningen* (lein)
-- incluye la característica de *browser reloadable* (recarga la página de los clientes conectados)
+- *Biblioteca* de Clojure
+- soportado por *Leiningen* (lein) y *Clojure CLI Tools*
+- incluye la característica de *Browser Reloadable* (recarga la página de los clientes conectados)
 - requiere de *Leiningen* ó *clj* para compilar ClojureScript en JavaScript
 - tiene _problemas de interoperabilidad_ con ~CIDER~ de ~Emacs~
+*** Referencias
+**** Referencias Extra-Oficiales
+1. https://www.metosin.fi/blog/packaging-clojure
+** IN PROGRESS Leiningen
+*** Conceptos
+- útil para Clojure y ClojureScript
+- una herramienta *build automation* (automatiza las tareas de construcción de proyectos de Clojure)
+- un *gestor de dependencias*
+- incluye un _sistema de plantillas_
+- soporta *Figwheel Main* (biblioteca de ClojureScript)
+- soporta *Shadow Cljs* (ClojureScript Build Tool)
+*** Referencias
+**** Referencias Oficiales
+1. https://leiningen.org/
+**** Referencias Extra-Oficiales
+1. [[https://www.baeldung.com/leiningen-clojure][Intro to Leiningen for Clojure (baeldung.com)]]
+** Figwheel Main
+*** Conceptos
+- de forma simple, es una *biblioteca de Clojure*
+- de forma más específica, es un archivo ~jar~ con *código fuente de Clojure*
+
+#+BEGIN_QUOTE
+~figwheel~ es una herramienta que hace de *Wrapper* del *compilador de ClojureScript*,
+dónde *ClojureScript* _compila Clojure al lenguaje JavaScript_
+#+END_QUOTE
+*** Características relevantes
+- permite escribir *Código recargable*
+- Hot Reloading
+- Live Reloading (Live CSS Reloading, Live JavaScript Reloading)
+- herramienta REPL de ClojureScript
+*** Instalación con Clojure CLI Tools
+- requiere que la especificamos en el archivo ~deps.edn~ del directorio raíz del proyecto
+
+#+BEGIN_QUOTE
+Su instalación es similar a los *gestores de paquetes* de ~nodejs~ ó ~python~ que manejan sus dependencias
+
+En ~Nodejs~ las bibliotecas se agregan
+  - mediante la *linea de comandos* usando los *gestores de paquetes* ~npm~ ó ~yarn~ (éste segundo es más moderno)
+  - ó especificandolas en ~package.json~ y luego usar esos gestores de paquetes para instalar de forma local en un proyecto
+
+En ~Python~ las bibliotecas se agregan
+  - mediante la *linea de comandos* usando los *gestores de paquetes* ~pip~ ó ~pipenv~ (éste segundo es más moderno)
+  - ó especificandolas en ~requirements.txt~ y luego usar esos gestores de paquetes para instalar de forma local en un proyecto
+#+END_QUOTE
+*** Integración en Leiningen ó Clojure CLI Tools
+**** Figwheel Main + Clojure CLI Tools
+- requiere tener instalado los paquetes ~clojure~ (no confundir con el comando ~clj~ que es un wrapper de ~clojure~)
+- ejecutamos ~clj -A:build~ por linea de comandos
+**** Figwheel Main + Leiningen
+- utilizamos *leinigen* a través del comando ~lein~
+- ejecutamos ~lein fig:build~ por linea de comandos
+*** Referencias de Clojure/ClojureScript
+**** Referencias Oficiales
+1. https://figwheel.org/tutorial
+2. https://figwheel.org/docs/
+3. http://clojurians.net/ (community on slack platform)
+4. https://github.com/bhauman/figwheel-main
+**** Referencias Extra-Oficiales
+1. https://alquimistadecodigo.blogspot.com/2014/01/una-introduccion-clojure.html
+** Shadow Cljs
+*** Conceptos
+- Observa cambios (watch) + compila
+- Integración con Nodejs, NPM y módulos de JavaScript (módulos del Browser)
+- Posibilidad de ser utilizado como un *paquete de NPM* independiente mediante la *linea de commandos*
+*** Referencias
+**** Referencias Oficiales
+1. https://shadow-cljs.github.io/docs/UsersGuide.html
+** Conceptos relevantes
+*** JAR
+- las siglas de *Java ARchive*
+- un tipo archivo de Java que _contiene/archiva muchos archivos en uno sólo_ con extensión ~.jar~
+- un *archivo ejecutable* (programa) que se ejecuta por la *linea de comandos* ~java -jar nombre-archivo.jar~
 *** CIDER
 #+BEGIN_QUOTE
 CIDER son las siglas de *Clojure/ClojureScript Interactive Development Environment that Rocks*,
@@ -33,77 +109,73 @@ Mientras que el modo ~cider-mode~ de Emacs
   - búsqueda de definiciones y documentación
   - autocompletado de código
 #+END_QUOTE
-*** Referencias
-**** Referencias Oficiales
-1. https://docs.cider.mx/cider/index.html
-2. https://docs.cider.mx/cider/usage/interactive_programming.html
-**** Referencias Extra-Oficiales
-1. https://www.metosin.fi/blog/packaging-clojure
-**** Videoconferencias
-1. [[https://www.youtube.com/watch?v=aYA4AAjLfT0][Deep Dive into CIDER (by Bozhidar Basov)]]
-** Leiningen
-*** Conceptos
-- útil para Clojure y ClojureScript
-- incluye un _sistema de plantillas_
-- soporta *Figwheel Main* (biblioteca de ClojureScript)
-- soporta *Shadow Cljs* (ClojureScript Build Tool)
-*** Referencias
-**** Referencias Oficiales
-1. https://leiningen.org/
-**** Referencias Extra-Oficiales
-1. [[https://www.baeldung.com/leiningen-clojure][Intro to Leiningen for Clojure (baeldung.com)]]
-** Figwheel Main
-*** Conceptos
-- ~figwheel~ es una *biblioteca de Clojure*
-- para su instalación con *Clojure CLI Tools* la especificamos en ~deps.edn~
+*** Código Recargable
+#+BEGIN_QUOTE
+Una aplicación con *código recargable* requiere que un programa
+
+1. observe los cambios en el código fuente (ej. el de ClojureScript en archivos .cjs)
+2. compile el código fuente (Ej. clojurescript a javascript para que lo entienda el motor del Web Browser)
+#+END_QUOTE
+*** Hot Reloading
+**** Conceptos
+- _Inyecta código fuente actualizado_ a _una aplicación en ejecución_
+- evita pasar por el ciclo de (rebuild+relaunch) *re-construcción* y *re-ejecución* de toda la aplicación
+- recarga/refresca/actualiza _en tiempo real_ sólo el _código fuente actualizado_ (en vez de toda la aplicación)
+**** Proceso resumido del paso a paso
+#+BEGIN_QUOTE
+Mantiene _el estado de la aplicación_ y recarga/actualiza sólo _el código fuente actualizado_
+
+Si lo vemos de forma procedural, el paso a paso sería algo así
+1. la aplicación se mantiene en ejecución (running)
+2. le inyecta nuevas versiones de los archivos que fueron modificados en tiempo de ejecución (running)
+3. recarga/refresca/actualiza _en tiempo real_ sólo el _código fuente actualizado_ (en vez de toda la aplicación)
+#+END_QUOTE
+**** Escenarios dónde es necesario
+- si modificamos un formulario mientras lo probamos, y no queremos volver a completar todos los campos de texto
+*** Live Reloading
+**** Conceptos
+- ante cada *cambio de estado* de la aplicación, se refresca/actualiza automáticamente la aplicación entera
+- evita que el desarrollador deba refrescar la aplicación para ver los cambios
 
 #+BEGIN_QUOTE
-Su instalación es similar a como otras tecnologías manejan sus dependencias
-
-En ~Nodejs~ las bibliotecas se agregan
-  - mediante la *linea de comandos* usando los *gestores de paquetes* ~npm~ ó ~yarn~ (éste segundo es más moderno)
-  - ó especificandolas en ~package.json~ y luego usar esos gestores de paquetes para instalar de forma local en un proyecto
-
-En ~Python~ las bibliotecas se agregan
-  - mediante la *linea de comandos* usando los *gestores de paquetes* ~pip~ ó ~pipenv~ (éste segundo es más moderno)
-  - ó especificandolas en ~requirements.txt~ y luego usar esos gestores de paquetes para instalar de forma local en un proyecto
+Un *cambio de estado* podría ser
+- agregar un elemento en el DOM (Ej. sidebar, footer, header, menu de opciones, ..)
 #+END_QUOTE
-*** Integración con Leiningen ó Clojure CLI Tools
-**** Figwheel Main + Clojure CLI Tools
-- requiere tener instalado los paquetes ~clj~ y ~clojure~
-- ejecutamos ~clj -A:build~ por linea de comandos
-**** Figwheel Main + Leiningen
-- utilizamos *leinigen* a través del comando ~lein~
-- ejecutamos ~lein fig:build~ por linea de comandos
-*** Facilita el uso de Código Recargable (Live Buiding + Live Reloading)
-- Para una aplicación con *código recargable* se requiere
-  1. observar cambios en el código fuente (ej. el de ClojureScript en archivos .cjs)
-  2. compilar el código fuente a javascript para que lo entienda el motor del Web Browser
-- Integra *Live CSS reloading*,
-  1. observa _cambios en las hojas de estilo_ (.css)
-  2. notifica a todos los _clientes conectados_ (pestañas del Web Browser del celular, del ordenador, ..)
-  3. en _tiempo real el Web Browser actualiza el contenido_ de la página de los _clientes conectados_
-- Integra *Live JavaScript reloading*
-  1. observa _cambios en los scripts_ (.js)
-  2. notifica a todos los _clientes conectados_ (pestañas del Web Browser del celular, del ordenador, ..)
-  3. en _tiempo real el Web Browser actualiza el contenido_ de la página de los _clientes conectados_
+**** Escenarios dónde es necesario
+- llevar la aplicación a *un estado anterior*
+- remover _cambios que producen problemas_
+- descartar _elementos del DOM_ no deseados
+**** Live CSS Reloading
+1. observa _cambios en las hojas de estilo_ (.css)
+2. notifica a todos los _clientes conectados_ (pestañas del Web Browser del celular, del ordenador, ..)
+3. en _tiempo real el Web Browser actualiza el contenido_ de la página de los _clientes conectados_
+**** Live JavaScript Reloading
+1. observa _cambios en los scripts_ (.js)
+2. notifica a todos los _clientes conectados_ (pestañas del Web Browser del celular, del ordenador, ..)
+3. en _tiempo real el Web Browser actualiza el contenido_ de la página de los _clientes conectados_
+*** Hot Reloading Vs Live Reloading
+#+BEGIN_QUOTE
+Con *Live Reloading* se refresca/actualiza automáticamente _la aplicación entera_,
+ante cada *cambio de estado* de la aplicación
+
+Mientras que con *Hot Reloading* refresca _en tiempo real_ sólo el _código fuente actualizado_
+en vez de toda la aplicación
+#+END_QUOTE
 *** Herramienta REPL de ClojureScript integrada
 - sus siglas refieren al proceso *Read-Eval-Print-Loop*
 - dependiente del Web Browser (Ej. firefox, chrome, ..) para funcionar
 - interactúa entre distintos ambientes (environment)
   - el ambiente de la app en ejecución en el Web Browser (Ej. si le asociamos el namespace ~clj.user~)
   - el ambiente de desarrollo (Ej. si le asociamos el namespace ~proyecto.calculadora~)
-*** Referencias
+*** Referencias de Clojure/ClojureScript
+*** Referencias de JavaScript
 **** Referencias Oficiales
-1. https://figwheel.org/tutorial
-2. https://figwheel.org/docs/
-3. http://clojurians.net/ (community on slack platform)
-4. https://github.com/bhauman/figwheel-main
-** Shadow Cljs
-*** Conceptos
-- Observa cambios (watch) + compila
-- Integración con Nodejs, NPM y módulos de JavaScript (módulos del Browser)
-- Posibilidad de ser utilizado como un *paquete de NPM* independiente mediante la *linea de commandos*
-*** Referencias
+1. https://www.geeksforgeeks.org/how-are-hot-reloading-and-live-reloading-in-react-native-different/
+1. https://reactnative.dev/blog/2016/03/24/introducing-hot-reloading
+2. https://vue-loader.vuejs.org/guide/hot-reload.html
+*** Referencias de CIDER
 **** Referencias Oficiales
-1. https://shadow-cljs.github.io/docs/UsersGuide.html
+1. https://docs.cider.mx/cider/index.html
+2. https://docs.cider.mx/cider/usage/interactive_programming.html
+**** Videoconferencias
+1. [[https://www.youtube.com/watch?v=aYA4AAjLfT0][Deep Dive into CIDER (by Bozhidar Basov)]]
