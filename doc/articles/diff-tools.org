@@ -1,0 +1,11 @@
+* TODO Diff Tools                                                 :diff_tool:
+   :PROPERTIES:
+   :DATE-CREATED: <2023-11-21 Tue>
+   :DATE-UPDATED: <2023-11-21 Tue>
+   :BOOK: nil
+   :BOOK-CHAPTERS: nil
+   :COURSE: nil
+   :COURSE-LESSONS: nil
+   :END:
+** Referencias
+1. https://github.com/Wilfred/difftastic

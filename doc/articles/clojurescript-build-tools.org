@@ -168,6 +168,8 @@ en vez de toda la aplicación
   - el ambiente de la app en ejecución en el Web Browser (Ej. si le asociamos el namespace ~clj.user~)
   - el ambiente de desarrollo (Ej. si le asociamos el namespace ~proyecto.calculadora~)
 *** Referencias de Clojure/ClojureScript
+**** Videoconferencias
+1. [[https://www.youtube.com/watch?v=j-kj2qwJa_E][Developing ClojureScript with figwheel + LIVE reloading + HOT reloading (by Bruce Hauman)]]
 *** Referencias de JavaScript
 **** Referencias Oficiales
 1. https://www.geeksforgeeks.org/how-are-hot-reloading-and-live-reloading-in-react-native-different/
