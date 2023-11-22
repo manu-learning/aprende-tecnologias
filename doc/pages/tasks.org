@@ -126,3 +126,12 @@ CLOSED: [2023-11-16 Thu 13:27]
    :DATE-CREATED: <2023-11-21 Tue>
    :DATE-UPDATED: <2023-11-21 Tue>
    :END:
+** TODO Zulip Terminal                    :linux:terminal:chat:collaboration:
+   :PROPERTIES:
+   :DATE-CREATED: <2023-11-22 Wed>
+   :DATE-UPDATED: <2023-11-22 Wed>
+   :END:
+*** Referencias
+**** Referencias Oficiales
+1. https://github.com/zulip/zulip-terminal
+2. https://github.com/zulip/zulip
