@@ -1,4 +1,4 @@
-* UI Libraries                                               :ui:libraries:
+* UI Libraries                                               :clojure:ui:libraries:
    :PROPERTIES:
    :DATE-CREATED: <2023-11-28 Tue>
    :DATE-UPDATED: <2023-11-28 Tue>
