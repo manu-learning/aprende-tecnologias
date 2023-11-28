@@ -116,11 +116,16 @@ CLOSED: [2023-11-16 Thu 13:27]
    :END:
 *** Referencias
 1. https://github.com/babashka/neil
-** TODO Gestores de Paquetes para JavaScript     :javascript:package_manager:
+** TODO Gestores de Paquetes para JavaScript (yarn, npm, pnpm) :javascript:package_manager:
    :PROPERTIES:
    :DATE-CREATED: <2023-11-21 Tue>
    :DATE-UPDATED: <2023-11-21 Tue>
    :END:
+*** Conceptos
+   - yarn vs npm
+*** Referencias
+1. https://www.knowledgehut.com/blog/web-development/yarn-vs-npm
+2. https://blog.logrocket.com/javascript-package-managers-compared/
 ** TODO Diff Tools                                               :diff_tools:
    :PROPERTIES:
    :DATE-CREATED: <2023-11-21 Tue>
