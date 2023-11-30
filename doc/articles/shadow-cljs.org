@@ -1,0 +1,11 @@
+* IN PROGRESS Shadow Cljs                  :clojure:clojurescript:build_tool:
+   :PROPERTIES:
+   :DATE-CREATED: <2023-11-30 Thu>
+   :DATE-UPDATED: <2023-11-30 Thu>
+   :BOOK: nil
+   :BOOK-CHAPTERS: nil
+   :COURSE: nil
+   :COURSE-LESSONS: nil
+   :END:
+** Referencias
+1. https://shadow-cljs.github.io/docs/UsersGuide.html
