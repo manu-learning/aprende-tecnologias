@@ -9,24 +9,55 @@
    :END:
 ** Shadow Cljs Vs Figwheel Main
 *** Shadow Cljs
+**** Características
+- soportado por *Leiningen* (lein)
+- *Browser Reloadable* (recarga la página de los clientes conectados)
+- *ClojureScript Build Tool*
+  - herramienta de construcción de proyectos de ClojureScript
+  - compila ClojureScript a JavaScript, para que lo entienda el motor del Web Browser)
+**** Conceptos
 - se divide en
   - una *biblioteca* de Clojure
   - un *paquete* de NPM (Node Package Manager), provee una interfáz para interactuar vía *linea de comandos* para ejecutar sus funcionalidades
-- una *ClojureScript Build Tool* (herramienta de construcción de proyectos de ClojureScript)
 - más reciente que *Figwheel Main*
-- soportado por *Leiningen* (lein)
-- incluye la característica de *ClojureScript Build Tool* (compila ClojureScript a JavaScript, para que lo entienda el motor del Web Browser)
-- incluye la característica de *Browser Reloadable* (recarga la página de los clientes conectados)
 *** Figwheel Main
+**** Características
 - *Biblioteca* de Clojure
 - soportado por *Leiningen* (lein) y *Clojure CLI Tools*
-- incluye la característica de *Browser Reloadable* (recarga la página de los clientes conectados)
+- *Browser Reloadable* (recarga la página de los clientes conectados)
+**** Requisitos
 - requiere de *Leiningen* ó *clj* para compilar ClojureScript en JavaScript
+**** Problemas
 - tiene _problemas de interoperabilidad_ con ~CIDER~ de ~Emacs~
 *** Referencias
 **** Referencias Extra-Oficiales
 1. https://www.metosin.fi/blog/packaging-clojure
+** IN PROGRESS Clojure CLI + Lein
+https://tomekw.com/clojure-deps-edn-a-basic-guide/
+** IN PROGRESS Clojure CLI + Babashka
+https://dev.to/kiraemclean/building-a-fast-command-line-app-with-clojure-1kc8
+https://kozieiev.com/blog/clojure-cli-tools-deps-deps-edn-guide/
+https://nextjournal.com/fivo/clojure-babashka
 ** IN PROGRESS Leiningen
+#+BEGIN_COMMENT
+Al parecer Leiningen ya no se utiliza tanto porque requiere varias configuraciones,
+se prefiere Boot por sobre Leiningen porque en vez de configurar se utiliza código Clojure
+
+Boot parece que tampóco se utiliza, porque tiene problemas de performance y bugs
+
+Algunos ahora utilizan Clojure CLI + DEPS + Lein
+
+- use Leiningen for a self-contained tool (used for most existing Clojure projects)
+- use Clojure CLI for flexibility and a wide range of community tools (growing use for new projects)
+
+https://www.quora.com/Why-would-Clojure-programmers-want-to-switch-from-Lein-to-Boot
+https://www.braveclojure.com/appendix-b/
+https://clojureverse.org/t/leiningn-boot-the-command-line-tool-starting-from-scratch/9852
+https://www.reddit.com/r/Clojure/comments/kuth60/is_boot_deadon_life_support/
+https://clojure.org/guides/deps_and_cli
+https://clojureverse.org/t/leiningn-boot-the-command-line-tool-starting-from-scratch/9852/2
+https://danielcompton.net/snippets/leiningen-dependency-commands-clojure-cli
+#+END_COMMENT
 *** Conceptos
 - útil para Clojure y ClojureScript
 - una herramienta *build automation* (automatiza las tareas de construcción de proyectos de Clojure)
@@ -39,6 +70,17 @@
 1. https://leiningen.org/
 **** Referencias Extra-Oficiales
 1. [[https://www.baeldung.com/leiningen-clojure][Intro to Leiningen for Clojure (baeldung.com)]]
+2. http://xahlee.info/clojure/clojure_leiningen.html
+** TODO Neil
+*** Referencias
+**** Referencias Extra-Oficiales
+1. https://blog.michielborkent.nl/new-clojure-project-quickstart.html
+**** Repositorios
+1. https://github.com/babashka/neil
+** SOMEDAY Boot Clj
+*** Referencias
+**** Referencias Oficiales
+1. https://boot-clj.com/
 ** Figwheel Main
 *** Conceptos
 - de forma simple, es una *biblioteca de Clojure*
@@ -82,14 +124,35 @@ En ~Python~ las bibliotecas se agregan
 4. https://github.com/bhauman/figwheel-main
 **** Referencias Extra-Oficiales
 1. https://alquimistadecodigo.blogspot.com/2014/01/una-introduccion-clojure.html
-** Shadow Cljs
+** IN PROGRESS Shadow Cljs
 *** Conceptos
 - Observa cambios (watch) + compila
 - Integración con Nodejs, NPM y módulos de JavaScript (módulos del Browser)
 - Posibilidad de ser utilizado como un *paquete de NPM* independiente mediante la *linea de commandos*
+*** TODO Instalación y Configuración
+**** Ejemplo 1 - Paquete npm create-cljs-project
+#+BEGIN_SRC shell
+  # 1) Crear proyecto
+  npx create-cljs-project my-app
+
+  # 2) Configurar el proyecto + Ejecutar la REPL
+  #
+  # Alternativa 2a:
+  npx shadow-cljs node-repl
+
+  # Alternativa 2b:
+  npx shadow-cljs browser-repl
+#+END_SRC
 *** Referencias
 **** Referencias Oficiales
 1. https://shadow-cljs.github.io/docs/UsersGuide.html
+**** Referencias Extra-Oficiales
+1. https://bestofjs.org/projects/shadow-cljs
+**** Repositorios
+1. https://github.com/filipesilva/create-cljs-app (incluye Reagent, sugerido por ClojureScript)
+**** Paquetes NPM
+1. https://www.npmjs.com/package/create-cljs-project (última publicación en el 2018)
+2. https://www.npmjs.com/package/create-cljs-app (última publicación en el 2020)
 ** Conceptos relevantes
 *** JAR
 - las siglas de *Java ARchive*
@@ -116,7 +179,7 @@ Una aplicación con *código recargable* requiere que un programa
 1. observe los cambios en el código fuente (ej. el de ClojureScript en archivos .cjs)
 2. compile el código fuente (Ej. clojurescript a javascript para que lo entienda el motor del Web Browser)
 #+END_QUOTE
-*** Hot Reloading
+*** Hot Reloading (ó Interactive Programming)
 **** Conceptos
 - _Inyecta código fuente actualizado_ a _una aplicación en ejecución_
 - evita pasar por el ciclo de (rebuild+relaunch) *re-construcción* y *re-ejecución* de toda la aplicación
