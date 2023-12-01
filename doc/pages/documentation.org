@@ -8,8 +8,10 @@
   :AUTHOR: Shadow Cljs
   :YEAR-PUBLICATION: nil
   :END:
-** IN PROGRESS Introduction
-*** Basic Workflow
-*** IN PROGRESS Important Concepts
-**** Server Mode
-https://shadow-cljs.github.io/docs/UsersGuide.html#_server_mode
+*** Introduction
+**** Basic Workflow
+**** Important Concepts
+*** Installation
+*** IN PROGRESS Usage
+**** IN PROGRESS tools.deps / deps.edn
+
